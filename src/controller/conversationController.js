@@ -4,7 +4,8 @@ const sendMail = require('../utility/sendEmail');
 //for ec2
 
 //create conversation
-const create = async (req, res) => {    
+const create = async (req, res) => {   
+    console.log('create method call');
     try {
         client.query("INSERT INTO conversations(uuid,created_at,modified_at,conversation)VALUES($1,now(),now(),$2) RETURNING *", [uuidv4(), req.body], (error, result) => {
             if (!error) {
