@@ -3,7 +3,7 @@ const { Client } = require('pg')
 const dontenv = require('dotenv');
 dontenv.config({ path: '../config.env' });
 const client = new Client({
-    host: "43.205.120.186",//process.env.HOST,
+    host: "localhost",//process.env.HOST,
     port: 5432,//process.env.PORT,
     user: "postgres",//process.env.USER,
     password:"admin@123",// process.env.PASWORD,
