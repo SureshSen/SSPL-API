@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json());
 app.use('/api',conversationRouter);
 
-const port = 4100;
+const port = 3100;
 
 
 app.listen(port,(req,res)=>{
